@@ -18,12 +18,14 @@
     }
 
     #bratops-pc{
-        padding: 15px;
+        margin: 15px;
         width: 100%;
+        position: relative;
 
     }
     #bratops-pc img{
         width: 100%;
+        margin-bottom: 5px;
     }
 
     font {
@@ -32,19 +34,40 @@
         font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
     }
     #bratops-pc h1{
-        font-family: UniqloProBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: UniqloProRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: left;
+        font-weight: 400;
+
 
     }
     #bratops-pc p{
+        margin: 0;
         font-family: UniqloProRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
+        margin-bottom: 15px;
+        font-size: 12px;
+        text-align: left;
 
+
+    }
+    #bratops-pc .title{
+        font-family: UniqloProBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 5px 0;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+
+    }
+    #bratops-pc .content-quotes-container h1{
+        text-align: center;
+    }
     #bratops-pc button {
         border: 1px solid #000;
         background: #fff;
         cursor: pointer;
     }
-
     .bratops-container img {
         width: 100%;
         margin-bottom: 15px;
@@ -55,19 +78,35 @@
     #bratops-pc .btn-container {
         width: 100%;
     }
-
     #bratops-pc .btn-container button {
         width: 50%;
         padding: 10px 5px;
     }
+    #bratops-pc .banner-container{
+        position: relative;
+    }
+    #bratops-pc .bratop-text:nth-of-type(even){
+        position: absolute;
+        top:30%;
+        left:30%;
+    }
+    #bratops-pc .bratop-text:nth-of-type(odd){
+        position: absolute;
+        top:30%;
+        right:30%;
+    }
+    #bratops-pc .bratop-text button{
+    }
+
+
 </style>
 <body>
     <div id="bratops-pc">
         <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_hero_video" alt="" srcset="">
-        <div class="title">
+        <div >
             <div ></div>
             <div></div>
-            <h1>What is a Bra Top?</h1>
+            <h1 class="title">What is a Bra Top?</h1>
         </div>
         <h1>Simple, Stylish, and comfortable</h1>
         <p>Our comfy and flattering bra tops combine a bra and a top in one</p>
@@ -86,7 +125,7 @@
         </div>
         <div class="banner-container">
             <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_prdctn_airism_01" alt="" srcset="">
-            <div>
+            <div class="bratop-text">
                 <button>See AIRism Seamless <br> V-Neck Bra Camisoles </button>
                 <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_01 -->
             </div>
@@ -96,47 +135,61 @@
         </div>
         <div class="banner-container">
             <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_prdctn_airism_02" alt="" srcset="">
-            <button>See AIRism <br>Bra Camisoles</button>
-            <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_02 -->
+            <div class="bratop-text">
+                <button  >See AIRism <br>Bra Camisoles</button>
+                <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_02 -->
+            </div>
+
         </div>
         <div class="content-quotes-container">
             <h1>It's amazingly comfortable, easy on the shoulders, and doesn't feel tight</h1>
         </div>
         <div class="banner-container">
             <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_prdctn_airism_03" alt="">
-            <button>See AIRism <br> Bra Sleeveless Tops</button>
-            <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_03 -->
+            <div class="bratop-text">
+                <button >See AIRism <br> Bra Sleeveless Tops</button>
+                <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_03 -->
+            </div>
+ 
         </div>
         <div id="title-cotton" class="title">
             <h1>COTTON</h1>
         </div>
         <div class="banner-container">
             <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_prdctn_cotton_01" alt="" srcset="">
-            <button>See Wide-Ribbed <br>Bra Sleeveless Tops</button>
-            <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_04 -->
+            <div class="bratop-text">
+                <button >See Wide-Ribbed <br>Bra Sleeveless Tops</button>
+                <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_04 -->
+            </div>
+      
         </div>
         <div class="content-quotes-container">
             <h1>It has built-in bra cups so you don't need to think about underwear under a camisole</h1>
         </div>   
         <div class="banner-container">
             <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_prdctn_cotton_02" alt="" srcset="">
-            <button>See Ribbed Lace <br> Bra Sleeveless Tops</button>
-            <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_05 -->
+            <div class="bratop-text">
+                <button>See Ribbed Lace <br> Bra Sleeveless Tops</button>
+                <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_05 -->
+            </div>
+          
         </div> 
         <div class="content-quotes-container">
             <h1>They're handy for layering with clothes with wide necklines or sheet fabrics.</h1>
         </div>
         <div class="banner-container">
             <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_prdctn_cotton_03" alt="" srcset="">
-            <button>See Supimal Cotton <br> Bra Sleeveless Tops</button>
-            <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_06 -->
+            <div class="bratop-text">
+                <button>See Supimal Cotton <br> Bra Sleeveless Tops</button>
+                <!-- https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_06 -->
+            </div>
+     
         </div>
-        <div class="title">
+        <div >
             <div></div>
             <div></div>
-            <h1>Style Gallery</h1>
+            <h1 class="title">Style Gallery</h1>
         </div>
-        
         <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_style_gallery" alt="" srcset="">
     </div>
     
