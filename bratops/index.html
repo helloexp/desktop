@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bratops</title>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 <style>
     @font-face {
@@ -48,16 +52,17 @@
 
     #bratops-pc a {
         text-decoration: none;
+        font-family: UniqloProRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        letter-spacing: 1px;
         color: #fff;
     }
 
     #bratops-pc h3 {
         font-family: UniqloProRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        margin: 0;
         margin-bottom: 10px;
         font-size: 22px;
         text-align: left;
-        font-weight: 400;
+        font-weight: normal !important;
         letter-spacing: 1.5px;
 
     }
@@ -82,7 +87,7 @@
 
     #title-cotton h3 {
         text-transform: uppercase;
-        color: #777;
+        color: #595757;
         font-weight: 700;
         font-size: 42px;
         text-align: center;
@@ -133,7 +138,8 @@
         padding: 15px 5px;
         background: transparent;
         cursor: pointer;
-        color: #000;
+        color: #595757;
+
 
     }
     #bratops-pc .btn-container #airism-btn:hover{
@@ -156,7 +162,6 @@
         color: #000;
     }
     #bratops-pc .bratop-text button {
-        border: 1px solid #000;
         cursor: pointer;
         border: none;
         background: transparent;
@@ -188,13 +193,13 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    #bratops-pc .bratop-text button:hover a{
-        color: #F6F6F6;
-    }
-    #bratops-pc .bratop-text button:hover{
-        box-shadow: 10px 15px 10px rgba(0,0,0,.5);
+    
+    #bratops-pc .bratop-text button:hover a {
+        text-decoration: underline;
+        
     }
 
+    
     #bratops-pc .img-text-left {
         left: 15%;
     }
@@ -288,7 +293,8 @@
             <button id="airism-btn" style="border: 2px solid #009EE7">
                     <img style="width:100px;margin: 0"src="//uniqlo.scene7.com/is/image/UNIQLO/airism_2019_logo?$png$" alt="" srcset="">
             </button>
-                <button id="cotton-btn" style="border: 2px solid #000">
+        
+        <button id="cotton-btn" style="border: 2px solid #595757;">
                         Cotton
                 </button>
         </div>
@@ -303,7 +309,7 @@
                 <h3>AIRism SEAMLESS V-NECK <br> BRA CAMISOLE</h3>
                 <p>Stays hidden with new v-neck design and seamless* construction</p>
                 <button  style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_01?$png$ ')">
-                    <a href="//www.uniqlo.com/us/en/women-airism-seamless-v-neck-bra-camisole-413572.html?dwvar_413572_color=COL33">See
+                    <a id="btn-one"  href="//www.uniqlo.com/us/en/women-airism-seamless-v-neck-bra-camisole-413572.html?dwvar_413572_color=COL33">See
                         AIRism Seamless <br> V-Neck Bra Camisoles </a>
                 </button>
             </div>
@@ -319,8 +325,8 @@
             <div style="top: 18%; right: 5%" class="bratop-text img-text-right">
                 <h3>AIRism BRA CAMISOLE</h3>
                 <p>Smooth texture for cool comfort</p>
-                <button style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_02?$png$')">
-                    <a href="//www.uniqlo.com/us/en/women-airism-bra-camisole-413657.html?dwvar_413657_color=COL69">
+                <button  style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_02?$png$')">
+                    <a id="btn-two" href="//www.uniqlo.com/us/en/women-airism-bra-camisole-413657.html?dwvar_413657_color=COL69">
                         See AIRism <br>Bra Camisoles</a>
                 </button>
             </div>
@@ -336,8 +342,8 @@
             <div style="top: 12%; left: 10%" class="bratop-text img-text-left">
                 <h3>AIRism BRA <br> SLEEVELESS TOP</h3>
                 <p>Smooth texture for cool comfort.</p>
-                <button style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_03?$png$')">
-                    <a href="//www.uniqlo.com/us/en/women-airism-heather-bra-sleeveless-top-413669.html?dwvar_413669_color=COL02">
+                <button  style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_03?$png$')">
+                    <a id="btn-three" href="//www.uniqlo.com/us/en/women-airism-heather-bra-sleeveless-top-413669.html?dwvar_413669_color=COL02">
                         See AIRism <br> Bra Sleeveless Tops
                     </a>
                 </button>
@@ -354,7 +360,7 @@
                 <h3>WIDE RIBBED BRA <br> SLEEVELESS TOP</h3>
                 <p>The wide ribbed fabric adds <br> a touch of style to any outfit.</p>
                 <button style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_04?$png$') ">
-                    <a href="//www.uniqlo.com/us/en/women-wide-ribbed-bra-sleeveless-top-414002.html?dwvar_414002_color=COL32">
+                    <a id="btn-four" href="//www.uniqlo.com/us/en/women-wide-ribbed-bra-sleeveless-top-414002.html?dwvar_414002_color=COL32">
                         See Wide-Ribbed <br>Bra Sleeveless Tops
                     </a>
                 </button>
@@ -372,7 +378,7 @@
                 <h3>RIBBED LACE <br> BRA SLEEVELESS TOP</h3>
                 <p>Lace trim adds a pretty accent.</p>
                 <button style="background-image:url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_05?$png$')">
-                    <a href="//www.uniqlo.com/us/en/women-ribbed-lace-bra-sleeveless-top-414000.html?dwvar_414000_color=COL03">
+                    <a id="btn-five"  href="//www.uniqlo.com/us/en/women-ribbed-lace-bra-sleeveless-top-414000.html?dwvar_414000_color=COL03">
                         See Ribbed Lace <br> Bra Sleeveless Tops
                     </a>
                 </button>
@@ -388,9 +394,9 @@
             <img src="//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_prdctn_cotton_03" alt="" srcset="">
             <div style="top: 5%; right: 8%" class="bratop-text img-text-right">
                 <h3>SUPIMA<span>&#174;</span> Cotton <br> BRA SLEEVELESS TOP </h3>
-                <p>The smooth feet of high-quality Supima<span>&#174;</span> cotton</p>
-                <button style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_06?$png$')">
-                    <a href="//www.uniqlo.com/us/en/women-supima-cotton-bra-sleeveless-top-413566.html?dwvar_413566_color=COL03">
+                <p>The smooth feel of high-quality Supima<span>&#174;</span> cotton</p>
+                <button  style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_06?$png$')">
+                    <a id="btn-six" href="//www.uniqlo.com/us/en/women-supima-cotton-bra-sleeveless-top-413566.html?dwvar_413566_color=COL03">
                         See Supima Cotton <br> Bra Sleeveless Tops
                     </a>
                 </button>
@@ -410,10 +416,7 @@
         </div>
         <img src="//uniqlo.scene7.com/is/image/UNIQLO/us_pc_style_gallery" alt="" srcset="">
     </div>
-    <script
-        src="http://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+
     <script>
         $("#airism-btn").click(function() {
             $('html, body').animate({
@@ -426,5 +429,4 @@
             }, 1500);
         });
     </script>
-
 </html>
