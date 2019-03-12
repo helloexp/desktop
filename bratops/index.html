@@ -106,10 +106,11 @@
         position: relative;
         display: table;
         margin: 0 auto;
+        color: #444;
     }
 
     #bratops-pc .content-quotes-container .quotemarks-left {
-        top: -26px;
+        top: -35px;
         left: -40px;
     }
 
@@ -129,21 +130,22 @@
 
     #bratops-pc .btn-container button {
         width: 50%;
-        padding: 10px 5px;
+        padding: 15px 5px;
         background: transparent;
         cursor: pointer;
+        color: #000;
 
     }
     #bratops-pc .btn-container #airism-btn:hover{
-        background-color: rgba(190,218,230,.7);
+        background-color: rgba(190,218,230,.3);
     }
-    #bratops-pc .btn-container #cotton-btn a {
+    #bratops-pc .btn-container #cotton-btn  {
         font-family: UniqloProRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 26px;
         
     }
     #bratops-pc .btn-container #cotton-btn:hover{
-        background-color: rgba(190,218,230,.7);
+        background-color: rgba(0,0,0,.15);
         color: #fff;
     }
     #bratops-pc .btn-container #cotton-btn:hover a{
@@ -171,6 +173,7 @@
         position: absolute;
         width: 300px;
         top: 15%;
+        color: #444;
         /* min-height: 180px; */
     }
 
@@ -186,7 +189,10 @@
         background-size: 100% 100%;
     }
     #bratops-pc .bratop-text button:hover a{
-        color: #000;
+        color: #F6F6F6;
+    }
+    #bratops-pc .bratop-text button:hover{
+        box-shadow: 10px 15px 10px rgba(0,0,0,.5);
     }
 
     #bratops-pc .img-text-left {
@@ -280,17 +286,13 @@
         <img style="margin-top: 3px;"src="//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_123_point" alt="" srcset="">
         <div class="btn-container flex">
             <button id="airism-btn" style="border: 2px solid #009EE7">
-                <a href="">
                     <img style="width:100px;margin: 0"src="//uniqlo.scene7.com/is/image/UNIQLO/airism_2019_logo?$png$" alt="" srcset="">
-                </a>    
             </button>
                 <button id="cotton-btn" style="border: 2px solid #000">
-                    <a href="">
                         Cotton
-                    </a>
                 </button>
         </div>
-        <div >
+        <div id="airism-section">
             <img style="width: 200px;margin: 30px auto ; display: block" src="//uniqlo.scene7.com/is/image/UNIQLO/airism_2019_logo?$png$"
                 alt="" srcset="">
         </div>
@@ -300,7 +302,7 @@
                 <p class="title-new">NEW</p>
                 <h3>AIRism SEAMLESS V-NECK <br> BRA CAMISOLE</h3>
                 <p>Stays hidden with new v-neck design and seamless* construction</p>
-                <button style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_01?$png$ ')">
+                <button  style="background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/us_pc_bratop_btn_01?$png$ ')">
                     <a href="//www.uniqlo.com/us/en/women-airism-seamless-v-neck-bra-camisole-413572.html?dwvar_413572_color=COL33">See
                         AIRism Seamless <br> V-Neck Bra Camisoles </a>
                 </button>
@@ -392,7 +394,6 @@
                         See Supima Cotton <br> Bra Sleeveless Tops
                     </a>
                 </button>
-                <!--  -->
             </div>
 
         </div>
@@ -409,6 +410,21 @@
         </div>
         <img src="//uniqlo.scene7.com/is/image/UNIQLO/us_pc_style_gallery" alt="" srcset="">
     </div>
-
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        $("#airism-btn").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#airism-section").offset().top - 20
+            }, 1000);
+        });
+        $("#cotton-btn").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#title-cotton").offset().top - 20
+            }, 1500);
+        });
+    </script>
 
 </html>
