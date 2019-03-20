@@ -6,13 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 
 <body>
+      
+
     <style>
+        #linen-collection-page .slick-dots {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 1rem 0;
+            list-style-type: none;
+        }
+	
+		#linen-collection-page .slick-dots li {
+			margin: 0 0.25rem;
+		}
+	
+		#linen-collection-page .slick-dots button {
+			display: block;
+			width: 10px;
+			height: 10px;
+			padding: 0;
+            cursor: pointer;
+			outline: none;
+			border: none;
+			border-radius: 100%;
+			background-color: gray;
+			
+			text-indent: -9999px;
+		}
+	
+		#linen-collection-page .slick-dots li.slick-active button {
+			background-color: black;
+		}
+        #linen-collection-page .slick-arrow{
+            cursor: pointer;
+			outline: none;
+			border: none;
+            background: transparent;
+            position: absolute;
+            top: calc(50% - 69px);
+            z-index: 100;
+
+        }
+        #linen-collection-page button.slick-next, button.slick-arrow.slick-next:hover, button.slick-arrow.slick-next:focus {
+            width: 15px;
+            height: 69px;
+            right: 15px;
+            background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -108px -819px no-repeat;
+        }
+        #linen-collection-page button.slick-prev, button.slick-arrow.slick-prec:hover, button.slick-arrow.slick-prev:focus {
+            width: 15px;
+            height: 69px;
+            left: 55px;
+            background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -97px -727px no-repeat;
+        }
+
+
         body {
             overflow-x: hidden;
             background-color: #fff;
+        }
+        #linen-collection-page{
+            width: 100%;
+        }
+      
+
+        #linen-collection-page .hero-slider,
+        #linen-collection-page .product-slider
+        {
+            margin-left: -40px;
         }
 
         #content {
@@ -222,7 +288,9 @@
             width: 420px;
         }
 
-        #linen .itemSet.right {}
+        #linen .itemSet.right {
+            /* margin: 0 4vw 16vw 20vw; */
+        } 
 
         #linen .itemSet h3 {
             padding: 0;
@@ -370,8 +438,10 @@
             background-color: #ffffff;
         }
 
-        a {}
 
+        button{
+            cursor: pointer;
+        }
         #linen .linkBtn span {
             background-image: url(https://www.uniqlo.com/jp/fashion/women/linen/images/190226-19SS_linen_w_pc_link-icon-arrow-right.png);
             background-repeat: no-repeat;
@@ -1049,47 +1119,23 @@
                                     class="txtLink" alt="">すべての商品ラインナップを見る</span></a>
                     </p>
                 </div>
-                <!-- //INCLUDE -->
-                <!-- <div class="section bannerSection">
-                    <h2>TODAY’S PICK UP</h2>
-                    <dl>
-                        <a href="//www.uniqlo.com/jp/news/topics/2019030601/">
-                            <dt><img src="common_https://www.uniqlo.com/jp/fashion/women/linen/images/190308-19SS_linen_w_bnr_03.jpg"
-                                    alt="心地よい風合いを楽しむ リネンコレクション">
-                            </dt>
-                        </a>
-                    </dl>
-                    <h2>2019 UNIQLO<br class="spParts">
-                        SPRING SUMMER STYLE</h2>
-                    <dl>
-                        <a href="//www.uniqlo.com/jp/fashion/women/">
-                            <dt><img src="common_https://www.uniqlo.com/jp/fashion/women/linen/images/190226-19SS_linen_w_bnr_01.jpg"
-                                    alt="オーバーサイズ×レギンス"></dt>
-                            <dd>オーバーサイズ×レギンス</dd>
-                        </a>
-                        <a href="#top"
-                            class="track_click ga_cat-SP_jp_fashion_women_linen_190226-19SS_linen_w_bnr_02 ga_act-OT__jp_fashion_women_linen">
-                            <dt><img src="common_https://www.uniqlo.com/jp/fashion/women/linen/images/190226-19SS_linen_w_bnr_02.jpg"
-                                    alt="リネンコレクション"></dt>
-                            <dd>リネンコレクション</dd>
-                        </a>
-                    </dl>
-                </div>
-            </div> -->
-            <!-- pagetop -->
-            <!-- <div class="pagetop js-pagetop">
-                <a href="content"><img
-                        src="https://www.uniqlo.com/jp/fashion/women/linen/images/190226-19SS_linen_w_pc_pagetop.jpg"
-                        alt="pagetop" class="img-responsive"></a>
-            </div> -->
-            <!-- //pagetop -->
+
         </div>
         <!-- // end contents -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script>
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault()
+                $('html, body').animate(
+                    {
+                    scrollTop: $($(this).attr('href')).offset().top - 50,
+                    },
+                    1000,
+                    'linear'
+                )
+            })
 
             $(function(){
                 $('.hero-slider').slick({
@@ -1103,6 +1149,8 @@
             $(function(){
                 $('.product-slider').slick({
                     dots: true,
+                    nextArrow: '<button class="slick-prev slick-arrow"></button>',
+                    prevArrow: '<button class="slick-next slick-arrow"></button>',
                 });
             });
 
