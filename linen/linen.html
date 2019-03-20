@@ -23,6 +23,9 @@
             margin-right: auto;
             text-size-adjust: 100%;
         }
+        #content li{
+            list-style-type: none;
+        }
 
         /* cover */
         #content .cover {
@@ -402,11 +405,13 @@
         }
     </style>
     <div id="linen-collection-page">
+        
+
         <div id="content">
 
             <div class="section cover">
                 <h1>
-                    <ul class="coverslider">
+                    <ul class="coverslider hero-slider">
                         <li><img src="https://www.uniqlo.com/jp/fashion/women/linen/images/190226-19SS_linen_w_cover_01.jpg"
                                 alt="2019 UNIQLO 春夏 リラックススタイル ☓ リネンコレクション"></li>
                         <li><img src="https://www.uniqlo.com/jp/fashion/women/linen/images/190226-19SS_linen_w_cover_02.jpg"
@@ -512,7 +517,7 @@
                         <div class="section itemSet right">
                             <h3>プレミアムリネンストライプスキッパーシャツ</h3>
                             <div class="slider">
-                                <ul class="bxslider">
+                                <ul class="product-slider">
                                     <li>
                                         <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009358" class="pcParts"><img
                                                 src="https://www.uniqlo.com/jp/fashion/women/linen/common_images/190226-19SS_linen_w_premiumlinen_slide_01-01.jpg"
@@ -574,7 +579,7 @@
                         <div class="section itemSet right">
                             <h3>プレミアムリネンチェックシャツ</h3>
                             <div class="slider">
-                                <ul class="bxslider">
+                                <ul class="product-slider">
                                     <li>
                                         <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009351" class="pcParts"><img
                                                 src="https://www.uniqlo.com/jp/fashion/women/linen/common_images/190226-19SS_linen_w_premiumlinen_slide_02-01.jpg"
@@ -660,7 +665,7 @@
                             <h3>ベルテッドリネンコットン<br>
                                 ワイドパンツ</h3>
                             <div class="slider">
-                                <ul class="bxslider">
+                                <ul class="product-slider">
                                     <li>
                                         <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009345" class="pcParts"><img
                                                 src="https://www.uniqlo.com/jp/fashion/women/linen/common_images/190226-19SS_linen_w_linencotton_slide_01-01.jpg"
@@ -806,7 +811,7 @@
                         <div class="section itemSet right" style="position: absolute; left: 0px; top: 1873.33px;">
                             <h3>リネンブレンドワンピース(7分袖)</h3>
                             <div class="slider">
-                                <ul class="bxslider">
+                                <ul class="product-slider">
                                     <li>
                                         <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009356" class="pcParts"><img
                                                 src="https://www.uniqlo.com/jp/fashion/women/linen/common_images/190226-19SS_linen_w_linencotton_slide_02-01.jpg"
@@ -864,7 +869,7 @@
                         <div class="section itemSet">
                             <h3>リネンブレンドシャツ(7分袖)</h3>
                             <div class="slider">
-                                <ul class="bxslider">
+                                <ul class="product-slider">
                                     <li>
                                         <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009353" class="pcParts"><img
                                                 src="https://www.uniqlo.com/jp/fashion/women/linen/common_images/190226-19SS_linen_w_linenblend_slide_01-01.jpg"
@@ -926,7 +931,7 @@
                         <div class="section itemSet">
                             <h3>リネンブレンドブラウス(ノースリーブ)</h3>
                             <div class="slider">
-                                <ul class="bxslider">
+                                <ul class="product-slider">
                                     <li>
                                         <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009365" class="pcParts"><img
                                                 src="https://www.uniqlo.com/jp/fashion/women/linen/common_images/190226-19SS_linen_w_linenblend_slide_02-01.jpg"
@@ -989,7 +994,7 @@
                         <div class="section itemSet center">
                             <h3>リネンブレンドAラインワンピース</h3>
                             <div class="slider">
-                                <ul class="bxslider">
+                                <ul class="product-slider">
                                     <li>
                                         <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009357" class="pcParts"><img
                                                 src="https://www.uniqlo.com/jp/fashion/women/linen/common_images/190226-19SS_linen_w_linenblend_slide_03-01.jpg"
@@ -1080,8 +1085,27 @@
             <!-- //pagetop -->
         </div>
         <!-- // end contents -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+
+            $(function(){
+                $('.hero-slider').slick({
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                });
+            });
+            $(function(){
+                $('.product-slider').slick();
+            });
+
+
+
+        </script>
     </div>
+    
 </body>
 
 </html>
