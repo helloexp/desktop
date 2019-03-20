@@ -488,7 +488,7 @@
                                         class="txtLink" alt="">プレミアムリネンの素材について</span></a>
                         </p>
                     </div>
-                    <div class="grid">
+                    <div class="grid" style = "position: relative; height: 2670px;">
                         <div class="section itemSet pcParts"></div>
                         <div class="section itemSet" style="position: absolute; left: 540px; top: 0px;">
                             <h3>プレミアムリネンスキッパーシャツ</h3>
@@ -613,7 +613,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="section itemSet" style="position: absolute; left: 0px; top: 996.667px;">
+                        <div class="section itemSet" style="position: absolute; left: 540px; top: 1741px;">
                             <h3>プレミアムリネンシャツ<br>
                                 (ノースリーブ)</h3>
                             <p class="imageBox">
@@ -866,7 +866,7 @@
                     </div>
                     <div class="grid" style="position: relative; height: 2701.63px;">
                         <div class="section itemSet pcParts"></div>
-                        <div class="section itemSet">
+                        <div class="section itemSet" style="position: absolute; left: 540px; top: 0px;">
                             <h3>リネンブレンドシャツ(7分袖)</h3>
                             <div class="slider">
                                 <ul class="product-slider">
@@ -903,7 +903,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="section itemSet right">
+                        <div class="section itemSet right" style="position: absolute; left: 0px; top: 120px;">
                             <h3>リネンブレンドブラウス(半袖)</h3>
                             <p class="imageBox">
                                 <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009354" class="pcParts"><img
@@ -928,7 +928,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="section itemSet">
+                        <div class="section itemSet" style="position: absolute; left: 540px; top: 897px;">
                             <h3>リネンブレンドブラウス(ノースリーブ)</h3>
                             <div class="slider">
                                 <ul class="product-slider">
@@ -965,7 +965,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="section itemSet right">
+                        <div class="section itemSet right" style="position: absolute; left: 0px; top: 1001px;" >
                             <h3>リネンブレンドロングシャツ(半袖)</h3>
                             <p class="imageBox">
                                 <a href="//www.uniqlo.com/jp/stylingbook/pc/style/10009355" class="pcParts"><img
@@ -991,7 +991,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="section itemSet center">
+                        <div class="section itemSet center" style="position: absolute; left: 540px; top: 1818px;">
                             <h3>リネンブレンドAラインワンピース</h3>
                             <div class="slider">
                                 <ul class="product-slider">
@@ -1094,11 +1094,16 @@
             $(function(){
                 $('.hero-slider').slick({
                     autoplay: true,
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 2500,
+                    dots: false,
+                    prevArrow: false,
+                    nextArrow: false
                 });
             });
             $(function(){
-                $('.product-slider').slick();
+                $('.product-slider').slick({
+                    dots: true,
+                });
             });
 
 
